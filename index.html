@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <style>
+        
+        .bg-custom {
+            background-image: url('https://wallpapercave.com/wp/wp6371761.jpg');
+            background-size: cover; 
+            background-position: center; 
+        }
+    </style>
+</head>
+<body class="bg-custom">
+
+<header class="bg-gray-800 text-black p-10">
+    <div class="container mx-auto flex justify-between">
+        <h1 class="text-5xl font-serif ">Tienda de Personajes</h1>
+        <div class="relative">
+            <img src="img/cart.png" id="img-carrito" class="cursor-pointer w-10 h-10">
+            <div id="carrito" class="hidden absolute right-0 bg-white shadow-lg rounded-lg mt-2 p-4 z-50">
+                <table id="lista-carrito" class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="text-left">Imagen</th>
+                            <th class="text-left">Nombre</th>
+                            <th class="text-left">Precio</th>
+                            <th class="text-left">Cantidad</th>
+                            <th class="text-left"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#" id="vaciar-carrito" class="block text-center bg-gray-800 text-white py-2 mt-4 rounded">Vaciar Carrito</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="lista-cursos" class="container mx-auto mt-6">
+    <h1 class="text-5xl text-center font-semibold">Personajes a Comprar</h1>
+    <div class="flex flex-wrap justify-center mt-4">
+        
+        <div class="bg-white shadow-lg rounded-lg p-4 max-w-xs mx-2 mb-4">
+            <img src="img/eddardstark.jpg" class="w-full h-48 object-cover">
+            <div class="mt-4">
+                <h4 class="text-lg font-semibold">Eddard Stark</h4>
+                <p>House Stark</p>
+                <p class="text-lg font-bold">$59</p>
+                <a href="#" class="block bg-gray-800 text-white text-center py-2 rounded mt-2 agregar-carrito" data-id="1" data-nombre="Eddard Stark" data-precio="59" data-imagen="img/eddardstark.jpg">Agregar Al Carrito</a>
+            </div>
+        </div>
+
+        
+        <div class="bg-white shadow-lg rounded-lg p-4 max-w-xs mx-2 mb-4">
+            <img src="img/jaime.jpg" class="w-full h-48 object-cover">
+            <div class="mt-4">
+                <h4 class="text-lg font-semibold">Jaime Lannister</h4>
+                <p>House Lannister</p>
+                <p class="text-lg font-bold">$59</p>
+                <a href="#" class="block bg-blue-600 text-white text-center py-2 rounded mt-2 agregar-carrito" data-id="2" data-nombre="Jaime Lannister" data-precio="59" data-imagen="img/jaime.jpg">Agregar Al Carrito</a>
+            </div>
+        </div>
+
+        
+        <div class="bg-white shadow-lg rounded-lg p-4 max-w-xs mx-2 mb-4">
+            <img src="img/robb.jpg" class="w-full h-48 object-cover">
+            <div class="mt-4">
+                <h4 class="text-lg font-semibold">Robb Stark</h4>
+                <p>House Stark</p>
+                <p class="text-lg font-bold">$59</p>
+                <a href="#" class="block bg-gray-800 text-white text-center py-2 rounded mt-2 agregar-carrito" data-id="3" data-nombre="Robb Stark" data-precio="59" data-imagen="img/robb.jpg">Agregar Al Carrito</a>
+            </div>
+        </div>
+
+        
+        <div class="bg-white shadow-lg rounded-lg p-4 max-w-xs mx-2 mb-4">
+            <img src="img/dexter.jpg" class="w-full h-48 object-cover">
+            <div class="mt-4">
+                <h4 class="text-lg font-semibold">Dexter Morgan</h4>
+                <p>Dexter series</p>
+                <p class="text-lg font-bold">$59</p>
+                <a href="#" class="block bg-green-500 text-white text-center py-2 rounded mt-2 agregar-carrito" data-id="4" data-nombre="Dexter Morgan" data-precio="59" data-imagen="img/dexter.jpg">Agregar Al Carrito</a>
+            </div>
+        </div>
+
+        
+        <div class="bg-white shadow-lg rounded-lg p-4 max-w-xs mx-2 mb-4">
+            <img src="img/napoleon.jpg" class="w-full h-48 object-cover">
+            <div class="mt-4">
+                <h4 class="text-lg font-semibold">Napoleon Bonaparte</h4>
+                <p>Personajes Históricos</p>
+                <p class="text-lg font-bold">$59</p>
+                <a href="#" class="block bg-red-800 text-white text-center py-2 rounded mt-2 agregar-carrito" data-id="5" data-nombre="Napoleon Bonaparte" data-precio="59" data-imagen="img/napoleon.jpg">Agregar Al Carrito</a>
+            </div>
+        </div>
+
+        
+        <div class="bg-white shadow-lg rounded-lg p-4 max-w-xs mx-2 mb-4">
+            <img src="img/Jon.jpg" class="w-full h-48 object-cover">
+            <div class="mt-4">
+                <h4 class="text-lg font-semibold">Jon Snow</h4>
+                <p>Bastard</p>
+                <p class="text-lg font-bold">$59</p>
+                <a href="#" class="block bg-gray-800 text-white text-center py-2 rounded mt-2 agregar-carrito" data-id="6" data-nombre="Jon Snow" data-precio="59" data-imagen="img/Jon.jpg">Agregar Al Carrito</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-gray-800 text-white mt-10 p-4">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Tienda de Juegos. Todos los derechos reservados.</p>
+        <a href="https://r.search.yahoo.com/_ylt=AwrEqE_a6B5nZJ0EkOar9Qt.;_ylu=Y29sbwNiZjEEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1731288538/RO=10/RU=https%3a%2f%2fes.wikipedia.org%2fwiki%2fCasa_Stark/RK=2/RS=DvMmYQ.6DoQ4i7DmLe.CvvOYWd4-" target="_blank" class="inline-block mt-4 bg-blue-600 text-white py-2 px-4 rounded">Mas sobre estos Personajes</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
